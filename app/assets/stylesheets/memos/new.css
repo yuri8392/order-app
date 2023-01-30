@@ -1,0 +1,51 @@
+.post-memo-form{
+  margin-top: calc(80px + 40px);
+  width: 100%;
+  padding: 30px 100px;
+}
+
+.post-memo-form form{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+form p {
+  width: 70%;
+}
+
+span{
+  color: red;
+  font-weight: bold;
+}
+
+.new-memo-title{
+  height: 50px;
+  width: 70%;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+
+.new-memo-content{
+  height: 400px;
+  width: 70%;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+
+.new-memo-image{
+  margin-bottom: 30px;
+}
+
+.new-memo-about_time{
+  height: 50px;
+  width: 70%;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+
+.new-memo-submit_btn{
+  height: 50px;
+  width: 30%;
+  margin-bottom: 30px;
+}
