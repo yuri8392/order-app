@@ -14,7 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'c5b308bdb490be54c7d750dcc83ae490794bc9dffcdbb6d0629ca79f03f4380d10aea21edac59192c2fbf7118eeef36e066b32723a56d08feb2e3731342f49c5'
+  # config.secret_key = 'e981d43d82d231230afce8fced679285b717e584b54c61115ed857ba8204938b4786105ef3516ef137feffc0d2209b8bb328e5f6b70830e57392a913bc2a4791'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -58,12 +58,12 @@ Devise.setup do |config|
   # Configure which authentication keys should be case-insensitive.
   # These keys will be downcased upon creating or modifying a user and when used
   # to authenticate or find a user. Default is :email.
-  config.case_insensitive_keys = [:employee_number]
+  config.case_insensitive_keys = [:email]
 
   # Configure which authentication keys should have whitespace stripped.
   # These keys will have whitespace before and after removed upon creating or
   # modifying a user and when used to authenticate or find a user. Default is :email.
-  config.strip_whitespace_keys = [:employee_number]
+  config.strip_whitespace_keys = [:email]
 
   # Tell if authentication through request.params is enabled. True by default.
   # It can be set to an array that will enable params authentication only for the
@@ -126,7 +126,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '13663db27f4e82c9562deb3c5b2e83d0fa378ffdb7692d3727c071d9fac5b4b2d747f5306f56c2af9358a10caf3042f7723a816d5c72ab6dcfae594dfa004e9a'
+  # config.pepper = '776ee141157c7bebbf384ad9e41735dfaa6755b7893e6163e3a73b5df5ba58415bf01ce1ed88a5edcb10020aab4c7e11bfcbe2e5dfc576df573bc2fa4c977251'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false

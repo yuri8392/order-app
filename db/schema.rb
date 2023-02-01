@@ -42,16 +42,16 @@ ActiveRecord::Schema.define(version: 2023_01_28_063823) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "employee_number", default: "", null: false
+    t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.string "nickname", null: false
+    t.boolean "admin", default: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "name", default: "", null: false
-    t.boolean "admin", default: false
-    t.index ["employee_number"], name: "index_users_on_employee_number", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
