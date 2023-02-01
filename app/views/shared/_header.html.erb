@@ -1,0 +1,38 @@
+<div class="header"> 
+  <div class="logo">
+    <%#= link_to image_tag("/images/big-logo.png", class:"header-icon"), "/" %>
+    <a href="/"><b>Order App</b></a>
+  </div>
+  <div class="header-btn">
+    <%# if current_user.admin%>
+      <%#= link_to '記事を投稿する', "#" , class:"post-memo-btn"%>
+    <%# end %>
+    <% if user_signed_in? %>
+      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"logout-btn"%>
+    <% else %>
+      <%= link_to 'ログイン', new_user_session_path, class:"logout-btn" %>
+    <% end %>
+  </div>
+  <div class="menu-bar">
+    <ul class="menu-elements">
+      <li id="menu1">
+        発注管理
+        <ul class="menu1-lists hidden" id="menu1-pull-down">
+          <li>リスト1</li>
+          <li>リスト2</li>
+          <li>リスト3</li>
+          <li>リスト4</li>
+        </ul>
+      </li>
+      <li id="menu2">
+        業者管理
+      </li>
+      <li id="menu3">
+        メモ管理
+      </li>
+      <li id="menu4">
+        ユーザー管理
+      </li>
+    </ul>
+  </div>
+</div>

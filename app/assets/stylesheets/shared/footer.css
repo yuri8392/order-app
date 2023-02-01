@@ -1,0 +1,13 @@
+.footer{
+  height: 60px;
+  background-color: #EEFFFF;
+  text-align:center;
+  height:60px;
+  line-height:60px;
+}
+
+.fotter-logo{
+  display: block;
+  padding: 20px 0;
+  margin: auto;
+}
