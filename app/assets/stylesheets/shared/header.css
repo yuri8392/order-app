@@ -78,6 +78,10 @@ li {
   position: relative;
 }
 
+#menu3 a {
+  color: white;
+}
+
 .menu1-lists{
   width: 100%;
   position: absolute;
