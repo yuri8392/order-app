@@ -9,9 +9,9 @@ Order Management
 デプロイ後記載
 
 # テスト用アカウント 
-・Basic認証パスワード：  
-・Basic認証ID：  
-・管理権限者メールアドレス：admin@user  
+・Basic認証パスワード：admin
+・Basic認証ID：2222
+・管理権限者メールアドレス：admin@user
 ・管理権限者パスワード：admin1
 ・テストユーザーメールアドレス：test@user
 ・テストユーザーパスワード：123456
