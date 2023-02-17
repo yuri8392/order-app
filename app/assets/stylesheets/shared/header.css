@@ -78,7 +78,7 @@ li {
   position: relative;
 }
 
-#menu3 a {
+#menu1 a ,#menu2 a ,#menu3 a ,#menu4 a {
   color: white;
 }
 
