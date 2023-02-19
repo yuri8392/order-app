@@ -28,6 +28,11 @@
       <li id="menu3">
         <%= link_to 'メモ作成' ,new_memo_path %>
       </li>
+       <li id="menu4">
+        <% if user_signed_in? && current_user.admin? %>
+          <%= link_to 'ユーザー管理' ,'/', class: "post" %>
+        <% end %>
+      </li>     
     </ul>
   </div>
 </div>

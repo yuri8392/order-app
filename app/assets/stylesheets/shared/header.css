@@ -76,7 +76,7 @@ li {
   display: flex;
 }
 
-#menu1, #menu2, #menu3{
+#menu1, #menu2, #menu3, #menu4{
   height: 100%;
   width: calc(100% / 3);
   color: white;
@@ -87,7 +87,7 @@ li {
   position: relative;
 }
 
-#menu1 a ,#menu2 a ,#menu3 a {
+#menu1 a ,#menu2 a ,#menu3 a ,#menu4 a{
   color: white;
 }
 
