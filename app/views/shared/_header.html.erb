@@ -4,8 +4,10 @@
   </div>
   <div class="header-btn">
     <% if user_signed_in? %>
+      <%= link_to current_user.nickname + " さんようこそ" ,'/',class:"login-nickname" %>
       <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"logout-btn"%>
     <% else %>
+      <%= link_to '新規登録', new_user_registration_path, class:"logout-btn" %>
       <%= link_to 'ログイン', new_user_session_path, class:"logout-btn" %>
     <% end %>
   </div>
@@ -25,11 +27,6 @@
       </li>
       <li id="menu3">
         <%= link_to 'メモ作成' ,new_memo_path %>
-      </li>
-      <li id="menu4">
-        <% if user_signed_in? && current_user.admin? %>
-          <%= link_to 'ユーザー登録' ,new_user_registration_path, class: "post" %>
-        <% end %>
       </li>
     </ul>
   </div>

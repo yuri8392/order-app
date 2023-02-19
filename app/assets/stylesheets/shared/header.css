@@ -51,6 +51,15 @@ li {
   background: #040880;
 }
 
+.login-nickname{
+  font-size: 20px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  color: black;
+  margin-right: 4%;
+}
+
 .menu-bar{
   height: 40px;
   width: 100%;
@@ -67,7 +76,7 @@ li {
   display: flex;
 }
 
-#menu1, #menu2, #menu3, #menu4{
+#menu1, #menu2, #menu3{
   height: 100%;
   width: calc(100% / 3);
   color: white;
@@ -78,7 +87,7 @@ li {
   position: relative;
 }
 
-#menu1 a ,#menu2 a ,#menu3 a ,#menu4 a {
+#menu1 a ,#menu2 a ,#menu3 a {
   color: white;
 }
 
