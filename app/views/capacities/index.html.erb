@@ -1,0 +1,29 @@
+<%= render "shared/header" %>
+
+<div class="contents">
+  <div class="contents row">
+    <p>登録業者一覧</p>
+    <table border="1" style="border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th>業者コード</th>
+          <th>業者名</th>
+          <th>キャパシティ</th>
+          <th>備考</th>
+        </tr>
+      </thead>
+      <% @capacities.each do |capacity| %>
+        <div class="content_post" >
+          <tr>
+            <th><%= capacity.client_number %></th>
+            <th><%= capacity.client_name %></th>
+            <th><%= capacity.capacity %></th>
+            <th><%= capacity.remarks %></th>
+          </tr>
+        </div>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
