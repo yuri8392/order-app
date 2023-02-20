@@ -8,3 +8,19 @@
   flex-flow: column;
   align-items: center;
 }
+p{
+  font-size: 28px;
+}
+
+table{
+  width: 100%;
+}
+
+thead{
+  background-color: #CCFFFF;
+}
+th{
+  height: 50px;
+}
+
+
