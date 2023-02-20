@@ -1,0 +1,10 @@
+.contents{
+  margin-top: calc(80px + 40px);
+  width: 100%;
+  padding: 30px 100px;
+}
+.contents row{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}

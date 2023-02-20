@@ -1,0 +1,16 @@
+<%= render "shared/header" %>
+
+<div class="contents">
+  <div class="contents row">
+    <% @capacities.each do |capacity| %>
+      <div class="content_post" >
+          <%= capacity.client_number %>
+          <%= capacity.client_name %>
+          <%= capacity.capacity %>
+          <%= capacity.remarks %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
