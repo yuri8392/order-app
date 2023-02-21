@@ -16,27 +16,34 @@
       <li id="menu1">
         発注管理
         <ul class="menu1-lists hidden" id="menu1-pull-down">
-          <li>リスト1</li>
-          <li>リスト2</li>
-          <li>リスト3</li>
-          <li>リスト4</li>
+          <li><%= link_to '発注予定一覧' ,'/' %></li>
+          <li><%= link_to '発注済み一覧' ,'/' %></li>
         </ul>
       </li>
       <li id="menu2">
         業者管理
         <ul class="menu2-lists hidden" id="menu2-pull-down">
-          <li>業者登録</li>
+          <li><%= link_to '業者登録' ,'/' %></li>
           <li><%= link_to '業者一覧' ,capacities_path %></li>
         </ul>
       </li>
       <li id="menu3">
-        <%= link_to 'メモ作成' ,new_memo_path %>
+        メモ管理
+        <ul class="menu3-lists hidden" id="menu3-pull-down">
+          <li><%= link_to 'メモ作成' ,new_memo_path %></li>
+          <li><%= link_to 'メモ一覧' ,'/' %></li>
+        </ul>
       </li>
-       <li id="menu4">
-        <% if user_signed_in? && current_user.admin? %>
-          <%= link_to 'ユーザー管理' ,'/', class: "post" %>
-        <% end %>
-      </li>     
+      <li id="menu4">
+        ユーザー管理
+        <ul class="menu4-lists hidden" id="menu4-pull-down">
+          <li><%= link_to 'ユーザー一覧' ,'/' %></li>
+            <% if user_signed_in? && current_user.admin? %>
+              <li><%= link_to 'ユーザー登録' ,'/', class: "post" %></li>
+              <li><%= link_to 'ユーザー編集' ,'/', class: "post" %></li>
+            <% end %>
+        </ul>
+      </li>   
     </ul>
   </div>
 </div>
