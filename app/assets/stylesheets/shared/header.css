@@ -74,6 +74,7 @@ li {
   justify-content: center;
   margin: auto;
   display: flex;
+  padding-left: 0px;
 }
 
 #menu1, #menu2, #menu3, #menu4{
@@ -91,14 +92,15 @@ li {
   color: white;
 }
 
-.menu1-lists{
+.menu1-lists, .menu2-lists, .menu3-lists, .menu4-lists{
   width: 100%;
   position: absolute;
   top: 100%;
   right: 0px;
+  padding-left: 0px;
 }
 
-.menu1-lists li{
+.menu1-lists li, .menu2-lists li, .menu3-lists li, .menu4-lists li{
   height: 35px;
   line-height: 35px;
   text-align: center;
