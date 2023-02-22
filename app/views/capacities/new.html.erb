@@ -1,0 +1,31 @@
+<%= render "shared/header" %>
+
+<div class="contents">
+  <div class="contents row">
+    <p>業者新規登録</p>
+      <%= form_with(model: @capacity, local: true) do |f| %>
+        <%= render 'shared/error_messages', model: f.object %>
+          <table border="1" style="border-collapse: collapse;">
+            <thead>
+              <tr>
+                <th><%= f.label :client_number, '業者コード' %></th>
+                <th><%= f.label :client_name, '業者名' %></th>
+                <th><%= f.label :capacity, 'キャパシティ' %></th>
+                <th><%= f.label :remarks, '備考' %></th>
+              </tr>
+            </thead>
+            <div class="content_post" >
+              <tr>
+                <th><%= f.text_field :client_number, placeholder: "必須（数字）" %></th>
+                <th><%= f.text_field :client_name, placeholder: "必須" %></th>
+                <th><%= f.text_field :capacity, placeholder: "必須（数字）" %></th>
+                <th><%= f.text_field :remarks, placeholder: "備考(任意)" %></th>
+              </tr>
+            </div>
+          </table>
+        <%= f.submit "登録", class:"new-memo-submit_btn" %>
+      <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
