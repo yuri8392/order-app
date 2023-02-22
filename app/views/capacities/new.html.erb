@@ -16,10 +16,10 @@
             </thead>
             <div class="content_post" >
               <tr>
-                <th><%= f.text_field :client_number, placeholder: "必須（数字）" %></th>
-                <th><%= f.text_field :client_name, placeholder: "必須" %></th>
-                <th><%= f.text_field :capacity, placeholder: "必須（数字）" %></th>
-                <th><%= f.text_field :remarks, placeholder: "備考(任意)" %></th>
+                <th><%= f.text_field :client_number, placeholder: "必須（数字）", :class =>"text_box" %></th>
+                <th><%= f.text_field :client_name, placeholder: "必須", :class =>"text_box" %></th>
+                <th><%= f.text_field :capacity, placeholder: "必須（数字）", :class =>"text_box" %></th>
+                <th><%= f.text_field :remarks, placeholder: "備考(任意)", :class =>"text_box" %></th>
               </tr>
             </div>
           </table>
