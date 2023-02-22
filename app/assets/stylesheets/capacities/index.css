@@ -2,6 +2,7 @@
   margin-top: calc(80px + 40px);
   width: 100%;
   padding: 30px 100px;
+  text-align: center;
 }
 .contents row{
   display: flex;
@@ -10,10 +11,12 @@
 }
 p{
   font-size: 28px;
+  text-align: left;
 }
 
 table{
   width: 100%;
+  margin-bottom: 50px;
 }
 
 thead{
