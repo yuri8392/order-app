@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: "memos#index"
   resources :memos, only: [:index, :new, :create, :destroy,:edit,:update]
   resources :capacities, only: [:index, :new, :create]
+  resources :orders, only: [:index]
 end

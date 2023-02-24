@@ -1,0 +1,29 @@
+<%= render "shared/header" %>
+
+<div class="contents">
+  <div class="contents row">
+    <p>発注一覧</p>
+    <table border="1" style="border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th>発注番号</th>
+          <th>ステータス</th>
+          <th>発注日</th>
+          <th>遅延日数</th>
+        </tr>
+      </thead>
+      <% @orders.each do |order| %>
+        <div class="content_post" >
+          <tr>
+            <th><%= order.order_number %></th>
+            <th><%= order.status %></th>
+            <th><%= order.order_date %></th>
+            <th><%= order.delay_days %></th>
+          </tr>
+        </div>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
