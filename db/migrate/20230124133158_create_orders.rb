@@ -4,7 +4,9 @@ class CreateOrders < ActiveRecord::Migration[6.0]
       t.string :order_number,null: false
       t.string :status,null: false
       t.date :order_date,null: false
-      t.integer :delay_days,null: false
+      t.date :deadline_date,null: false
+      t.integer :delay_days
+      t.references :apartment, null: false, foreign_key: true
       t.timestamps
     end
   end

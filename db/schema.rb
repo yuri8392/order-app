@@ -45,9 +45,12 @@ ActiveRecord::Schema.define(version: 2023_02_19_134443) do
     t.string "order_number", null: false
     t.string "status", null: false
     t.date "order_date", null: false
-    t.integer "delay_days", null: false
+    t.date "deadline_date", null: false
+    t.integer "delay_days"
+    t.bigint "apartment_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["apartment_id"], name: "index_orders_on_apartment_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -65,4 +68,5 @@ ActiveRecord::Schema.define(version: 2023_02_19_134443) do
   end
 
   add_foreign_key "memos", "users"
+  add_foreign_key "orders", "apartments"
 end
