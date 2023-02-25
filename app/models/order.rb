@@ -3,5 +3,6 @@ class Order < ApplicationRecord
   validates :status, presence: true
   validates :order_date, presence: true
   validates :deadline_date, presence: true
-  validates :apartment_id, presence: true
+  validates :status, presence: true
+  belongs_to :apartment
 end

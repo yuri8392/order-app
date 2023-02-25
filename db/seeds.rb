@@ -15,3 +15,4 @@ end
 CSV.foreach('db/order.csv') do |row|
   Order.create(:order_number => row[0], :status => row[1], :order_date => row[2],:deadline_date => row[3], :delay_days => row[4], :apartment_id => row[5])
 end
+

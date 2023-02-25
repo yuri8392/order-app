@@ -1,5 +1,7 @@
 <%= render "shared/header" %>
 
+require 'date'
+
 <div class="contents">
   <div class="contents row">
     <p>発注一覧</p>
@@ -9,7 +11,14 @@
           <th>発注番号</th>
           <th>ステータス</th>
           <th>発注日</th>
+          <th>納期</th>
           <th>遅延日数</th>
+          <th>業者CD</th>
+          <th>業者名</th>
+          <th>AP番号</th>
+          <th>号室</th>
+          <th>郵便番号</th>
+          <th>住所</th>
         </tr>
       </thead>
       <% @orders.each do |order| %>
@@ -18,7 +27,20 @@
             <th><%= order.order_number %></th>
             <th><%= order.status %></th>
             <th><%= order.order_date %></th>
-            <th><%= order.delay_days %></th>
+            <th><%= order.deadline_date %></th>
+
+            <% if order.status == "完了" || (Date.current - order.deadline_date).to_i < 0 %>
+              <th><%= 0 %></th>
+            <% else %>
+              <th><span><%= (Date.current - order.deadline_date).to_i %></span></th>
+            <% end %>
+
+            <th><%= order.apartment[:client_number] %></th>
+            <th><%= order.apartment[:client_name] %></th>
+            <th><%= order.apartment[:apartment_number] %></th>
+            <th><%= order.apartment[:room_number] %></th>
+            <th><%= order.apartment[:postal_code] %></th>
+            <th><%= order.apartment[:address] %></th>
           </tr>
         </div>
       <% end %>
