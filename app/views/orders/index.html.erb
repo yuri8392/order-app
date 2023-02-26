@@ -19,8 +19,6 @@ require 'date'
           <th>発注日</th>
           <th>納期</th>
           <th>遅延日数</th>
-          <th>キャパシティ</th>
-          <th>備考</th>
         </tr>
       </thead>
       <% @orders.each do |order| %>
@@ -42,11 +40,7 @@ require 'date'
             <% else %>
               <th><span><%= (Date.current - order.deadline_date).to_i %></span></th>
             <% end %>
-
-            <%# <th><%= order join capacites on orders.client_number = capacities.client_number %></th>
-            <%# hoges join foos on hoges.last_foo = foos.no %>
-            <%# User.left_outer_joins(:posts) %>
-
+            
           </tr>
         </div>
       <% end %>

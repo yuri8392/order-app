@@ -12,13 +12,6 @@
           <th>住所</th>
           <th>業者コード</th>
           <th>業者名</th>
-          <th>発注番号</th>
-          <th>ステータス</th>
-          <th>発注日</th>
-          <th>納期</th>
-          <th>遅延日数</th>
-          <th>キャパシティ</th>
-          <th>備考</th>
         </tr>
       </thead>
       <% @apartments.each do |apartment| %>
@@ -27,21 +20,9 @@
             <th><%= apartment.apartment_number %></th>
             <th><%= apartment.room_number %></th>
             <th><%= apartment.postal_code %></th>
+            <th><%= apartment.address %></th>
             <th><%= apartment.client_number %></th>
             <th><%= apartment.client_name %></th>
-            <%# <th><%= apartment.order[:order_number] %></th> %>
-            <%# <th><%= apartment.order[:order_number] %></th> %>
-            <%# <th><%= apartment.order[:status] %></th> %>
-            <%# <th><%= apartment.order[:order_date] %></th> %>
-            <%# <th><%= apartment.order[:deadline_date]</th> %> %>
-            
-            <%# <% if order.status == "完了" || (Date.current - order.deadline_date).to_i < 0 %> %>
-              <%# <th><%= 0 %></th> %>
-            <%# <% else %> %>
-              <%# <th><span><%= (Date.current - order.deadline_date).to_i %></span></th> %>
-            <%# <% end %> %>
-            
-            <%# <th><%= apartment.capacity[:deadline_date] %></th>
           </tr>
         </div>
       <% end %>
