@@ -16,8 +16,8 @@
       <li id="menu1">
         発注管理
         <ul class="menu1-lists hidden" id="menu1-pull-down">
-          <li><%= link_to '発注予定一覧' ,not_orderings_path %></li>
           <li><%= link_to '発注済み一覧' ,orders_path %></li>
+          <li><%= link_to '未発注物件' ,not_orderings_path %></li>
           <li><%= link_to '物件一覧' ,apartments_path %></li>
         </ul>
       </li>
@@ -32,7 +32,6 @@
         メモ管理
         <ul class="menu3-lists hidden" id="menu3-pull-down">
           <li><%= link_to 'メモ作成' ,new_memo_path %></li>
-          <li><%= link_to 'メモ一覧' ,'/' %></li>
         </ul>
       </li>
       <li id="menu4">
