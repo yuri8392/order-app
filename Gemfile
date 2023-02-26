@@ -66,3 +66,5 @@ group :production do
 end
 
 gem 'mail', '2.7.1'
+
+gem 'dotenv-rails'

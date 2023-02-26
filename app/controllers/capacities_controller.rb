@@ -13,7 +13,7 @@ class CapacitiesController < ApplicationController
   def create
     @capacity=Capacity.new(capacity_params)
     if @capacity.save
-      return redirect_to root_path
+      return redirect_to capacities_path
     else
       render "new"
     end
