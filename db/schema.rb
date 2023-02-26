@@ -41,6 +41,17 @@ ActiveRecord::Schema.define(version: 2023_02_19_134443) do
     t.index ["user_id"], name: "index_memos_on_user_id"
   end
 
+  create_table "not_orderings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "apartment_id", null: false
+    t.bigint "capacity_id", null: false
+    t.bigint "order_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["apartment_id"], name: "index_not_orderings_on_apartment_id"
+    t.index ["capacity_id"], name: "index_not_orderings_on_capacity_id"
+    t.index ["order_id"], name: "index_not_orderings_on_order_id"
+  end
+
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "order_number", null: false
     t.string "status", null: false
@@ -68,5 +79,8 @@ ActiveRecord::Schema.define(version: 2023_02_19_134443) do
   end
 
   add_foreign_key "memos", "users"
+  add_foreign_key "not_orderings", "apartments"
+  add_foreign_key "not_orderings", "capacities"
+  add_foreign_key "not_orderings", "orders"
   add_foreign_key "orders", "apartments"
 end

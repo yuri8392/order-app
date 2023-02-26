@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :memos, only: [:index, :new, :create, :destroy,:edit,:update]
   resources :capacities, only: [:index, :new, :create]
   resources :orders, only: [:index]
+  resources :apartments, only: [:index]
 end

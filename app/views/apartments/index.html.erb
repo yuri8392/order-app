@@ -1,0 +1,33 @@
+<%= render "shared/header" %>
+
+<div class="contents">
+  <div class="contents row">
+    <p>物件一覧</p>
+    <table border="1" style="border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th>AP番号</th>
+          <th>号室</th>
+          <th>郵便番号</th>
+          <th>住所</th>
+          <th>業者コード</th>
+          <th>業者名</th>
+        </tr>
+      </thead>
+      <% @apartments.each do |apartment| %>
+        <div class="content_post" >
+          <tr>
+            <th><%= apartment.apartment_number %></th>
+            <th><%= apartment.room_number %></th>
+            <th><%= apartment.postal_code %></th>
+            <th><%= apartment.address %></th>
+            <th><%= apartment.client_number %></th>
+            <th><%= apartment.client_name %></th>
+          </tr>
+        </div>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

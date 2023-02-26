@@ -1,0 +1,2 @@
+class NotOrdering < ApplicationRecord
+end
