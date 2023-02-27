@@ -1,6 +1,5 @@
 class CapacitiesController < ApplicationController
-  before_action :authenticate_user!, only: [:new]
-  before_action :move_to_index
+  before_action :authenticate_user!
 
   def index
     @capacities = Capacity.all
@@ -11,22 +10,15 @@ class CapacitiesController < ApplicationController
   end
 
   def create
-    @capacity=Capacity.new(capacity_params)
-    if @capacity.save
-      return redirect_to capacities_path
-    else
-      render "new"
-    end
+    @capacity = Capacity.new(capacity_params)
+    return redirect_to capacities_path if @capacity.save
+
+    render 'new'
   end
 
   private
+
   def capacity_params
     params.require(:capacity).permit(:client_number, :client_name, :capacity, :remarks)
-  end
-
-  def move_to_index
-    unless user_signed_in?
-      redirect_to root_path
-    end
   end
 end

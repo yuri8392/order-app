@@ -4,7 +4,7 @@ class MemosController < ApplicationController
   before_action :move_to_index, except: [:index]
 
   def index
-    @memos = Memo.all.order("created_at DESC")
+    @memos = Memo.all.order('created_at DESC')
   end
 
   def new
@@ -13,11 +13,9 @@ class MemosController < ApplicationController
 
   def create
     @memo = Memo.new(memo_params)
-    if @memo.save
-      return redirect_to root_path
-    else
-      render "new"
-    end
+    return redirect_to root_path if @memo.save
+
+    render 'new'
   end
 
   def edit
@@ -25,31 +23,30 @@ class MemosController < ApplicationController
   end
 
   def update
-    if @memo.update(memo_params)
-      return redirect_to root_path
-    else
-      render "edit"
-    end
+    return redirect_to root_path if @memo.update(memo_params)
+
+    render 'edit'
   end
 
   def destroy
-    if @memo.destroy
-      return redirect_to root_path
-    end
+    return unless @memo.destroy
+
+    redirect_to root_path
   end
 
   private
+
   def memo_params
     params.require(:memo).permit(:title, :memo).merge(user_id: current_user.id)
   end
 
   def set_memo
-    @memo=Memo.find(params[:id])
+    @memo = Memo.find(params[:id])
   end
 
   def move_to_index
-    unless user_signed_in?
-      redirect_to action: :index
-    end
+    return if user_signed_in?
+
+    redirect_to action: :index
   end
 end
