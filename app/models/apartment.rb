@@ -4,5 +4,4 @@ class Apartment < ApplicationRecord
   validates :postal_code, presence: true
   validates :client_number, presence: true
   validates :client_name, presence: true
-  
 end
