@@ -9,11 +9,13 @@ Order App
 http://52.198.130.67
 
 # テスト用アカウント 
-・Basic認証パスワード：admin
+・Basic認証パスワード：admin<br>
 ・Basic認証ID：2222
-・管理権限者メールアドレス：admin@user
+
+・管理権限者メールアドレス：admin@user<br>
 ・管理権限者パスワード：admin1
-・テストユーザーメールアドレス：test@user
+
+・テストユーザーメールアドレス：test@user<br>
 ・テストユーザーパスワード：123456
 
 # 利用方法
