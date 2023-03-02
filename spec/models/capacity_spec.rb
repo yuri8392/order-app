@@ -16,12 +16,12 @@ RSpec.describe Capacity, type: :model do
       it 'client_numberが空では登録できない' do
         @capacity.client_number = ''
         @capacity.valid?
-        expect(@capacity.errors.full_messages).to include("Client_number can't be blank")
+        expect(@capacity.errors.full_messages).to include("Client number can't be blank")
       end
       it 'client_nameが空では登録できない' do
         @capacity.client_name = ''
         @capacity.valid?
-        expect(@capacity.errors.full_messages).to include("Client_name can't be blank")
+        expect(@capacity.errors.full_messages).to include("Client name can't be blank")
       end
       it 'capacityが空では登録できない' do
         @capacity.capacity = ''
@@ -33,17 +33,17 @@ RSpec.describe Capacity, type: :model do
         another_capacity = FactoryBot.build(:capacity)
         another_capacity.client_number = @capacity.client_number
         another_capacity.valid?
-        expect(another_capacity.errors.full_messages).to include('Client_number has already been taken')
+        expect(another_capacity.errors.full_messages).to include('Client number has already been taken')
       end
       it 'client_numberが3文字以下では登録できない' do
         @capacity.client_number = '000'
         @capacity.valid?
-        expect(@capacity.errors.full_messages).to include('Client_number is too short (minimum is 4 characters)')
+        expect(@capacity.errors.full_messages).to include('Client number is too short (minimum is 4 characters)')
       end
       it 'client_numberは数値でないと登録できない' do
         @capacity.client_number = 'ああああああ'
         @capacity.valid?
-        expect(@capacity.errors.full_messages).to include('Client_number is not a number')
+        expect(@capacity.errors.full_messages).to include('Client number is not a number')
       end
       it 'キャパシティは整数でないと登録できない' do
         @capacity.capacity = 'ああああああ'
@@ -52,4 +52,4 @@ RSpec.describe Capacity, type: :model do
       end
     end
   end
-
+end

@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :capacity do
-    client_number {Faker::Number.between(from: 4, to: 8)}
-    client_name {Faker::company}
+    client_number {Faker::Number.between(from: 10000)}
+    client_name {Faker::Company.name}
     capacity {Faker::Number.between(from: 0)} 
   end
 end
