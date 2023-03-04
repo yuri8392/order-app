@@ -34,7 +34,7 @@ RSpec.describe Capacity, type: :model do
         another_capacity.client_number = @capacity.client_number
         another_capacity.valid?
         expect(another_capacity.errors.full_messages).to include('Client number has already been taken')
-      end
+      end 
       it 'client_numberが3文字以下では登録できない' do
         @capacity.client_number = '000'
         @capacity.valid?
