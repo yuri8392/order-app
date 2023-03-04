@@ -2,7 +2,7 @@
 
 <div class="contents">
   <div class="contents row">
-    <p>未発注物件</p>
+    <p>物件検索</p>
     
     <div class="address_box">
       <input id="address" type="textbox" value="地名入力">
@@ -48,6 +48,35 @@
       </script>
       <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['API_KEY'] %>&callback=initMap" async defer></script>
   </div>
+
+  <div class="contents row">
+    <p>未発注物件一覧</p>
+    <table border="1" style="border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th>AP番号</th>
+          <th>号室</th>
+          <th>郵便番号</th>
+          <th>住所</th>
+          <th>業者コード</th>
+          <th>業者名</th>
+        </tr>
+      </thead>
+      <% @not_orderings.each do |not_ordering| %>
+        <div class="content_post" >
+          <tr>
+            <th><%= not_ordering.apartment[:apartment_number] %></th>
+            <th><%= not_ordering.apartment[:room_number] %></th>
+            <th><%= not_ordering.apartment[:postal_code] %></th>
+            <th><%= not_ordering.apartment[:address] %></th>
+            <th><%= not_ordering.apartment[:client_number] %></th>
+            <th><%= not_ordering.apartment[:client_name] %></th>
+          </tr>
+        </div>
+      <% end %>
+    </table>
+  </div>
+
 </div>
 
 <%= render "shared/footer" %>
